@@ -1,0 +1,16 @@
+[Unit]
+Description=rtl_tcp server daemon
+After=network.target
+
+[Service]
+EnvironmentFile=/etc/sysconfig/rtltcp
+ExecStart=/usr/bin/rtl_tcp $OPTIONS
+KillMode=mixed
+KillSignal=SIGINT
+TimeoutStopSec=10
+SuccessExitStatus=1 SIGKILL
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+

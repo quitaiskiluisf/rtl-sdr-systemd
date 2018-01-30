@@ -3,7 +3,7 @@ Description=rtl_tcp server daemon
 After=network.target
 
 [Service]
-EnvironmentFile=/etc/sysconfig/rtltcp
+EnvironmentFile=/etc/default/rtltcp
 ExecStart=/usr/bin/rtl_tcp $OPTIONS
 KillMode=mixed
 KillSignal=SIGINT

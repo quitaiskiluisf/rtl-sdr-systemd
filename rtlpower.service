@@ -1,0 +1,14 @@
+[Unit]
+Description=rtl_power logger daemon
+After=network.target
+
+[Service]
+EnvironmentFile=/etc/default/rtlpower
+ExecStart=/usr/local/bin/rtlpower-svc.sh
+KillMode=mixed
+KillSignal=SIGINT
+TimeoutStopSec=120
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

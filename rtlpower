@@ -1,0 +1,3 @@
+RTLPOWER_ARGS="-f 150M:180M:5k -c 0.3 -p 76"
+GZIP_ARGS="-9"
+FILE_PREFIX="/var/rtlpower-log/spectre-hf"
